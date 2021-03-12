@@ -10,6 +10,7 @@
 
 <footer>
    <p class="footer">footer</p>
+    <p>essai</p>
 
 </footer>
 <?php wp_footer(); ?>
