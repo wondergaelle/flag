@@ -1,0 +1,54 @@
+.bloc-title {
+  display: flex;
+  position: relative;
+  margin-bottom: 0;
+  width: 100%;
+  padding: auto auto 0 auto;
+  padding: 0 100px;
+  margin: 3rem 0 4rem;
+  .title-header {
+    align-items: center;
+    display: flex;
+    height: 750px;
+    justify-content: center;
+    margin-bottom: 0;
+    margin: auto;
+    @include media-breakpoint-down(lg) {
+      height: 400px;
+    }
+  }
+
+  /// Animation H1//
+
+  .typewriter h1 {
+    align-items: center;
+    animation: typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+  }
+}
+
+.typewriter {
+  font-size: 50px;
+  position: absolute;
+  z-index: 3;
+
+  @media (max-width: $bp-medium-large) {
+    font-size: 30px;
+  }
+  @media (max-width: $bp-small) {
+    font-size: 25px;
+  }
+  .Typewriter__wrapper {
+    font-size: 50px;
+
+    @media (max-width: $bp-medium) {
+      font-size: 35px;
+    }
+    @media (max-width: $bp-small) {
+      font-size: 20px;
+    }
+  }
+}
+

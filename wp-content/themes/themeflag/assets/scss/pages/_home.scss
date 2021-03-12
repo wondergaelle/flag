@@ -1,0 +1,123 @@
+#header {
+
+  margin-top: 60px;
+  position: relative;
+  padding-bottom: 160px;
+}
+
+.container {
+  max-width: 1800px;
+  max-height: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#header .container {
+
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/*@media (min-width: 730px) {
+  #header .container:before {
+
+    display: none;
+  }
+}*/
+
+
+@media (min-width: 820px) and (max-width: 2550px) {
+  #header .container:before {
+    bottom: 60px;
+    border-radius: 10px;
+    background-color: #FFD000;
+    background-position: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    left: 0;
+    max-height: 900px;
+    position: absolute;
+    top: 10px;
+    right: 600px;
+    z-index: 0;
+  }
+}
+
+#header .container:after {
+  background-size: 1px;
+  background-repeat: repeat-y;
+  background-position: 0 50%, 25% 50%, 50% 50%, 75% 50%, 100% 50%;
+  content: "";
+  height: 100%;
+  left: 50%;
+  max-width: 860px;
+  position: absolute;
+  transform: translate(-50%);
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+
+#header .container .ct .infos {
+  color: black;
+  position: relative;
+  top: 200px;
+  right: 400px;
+  z-index: 0;
+}
+
+#header .container .ct .infos p-1, p-2 {
+  font-family: "JMH Typewriter";
+  font-size: 25px;
+}
+
+#header .container .ct .infos h3 {
+  font-family: "Happy Time";
+  font-size: 60px;
+}
+
+#header .container:after {
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  bottom: 0px;
+  content: "";
+  right: 0px;
+  top: 196px;
+  position: absolute;
+  width: 540px;
+  z-index: 0;
+}
+
+#header .container .ct {
+  background-color: black;
+  border-radius: 10px;
+  color: inherit;
+  display: block;
+  width: calc(100% - 12px - 12px);
+  margin-bottom: 144px;
+  margin-left: calc(100% - 820px);
+  margin-top: 70px;
+  max-width: 710px;
+  max-height: 600px;
+  padding: 60px 55px;
+  position: relative;
+  transition: 1s;
+  z-index: 2;
+}
+
+#header .container .ct .photos img{
+  max-width: 20rem;
+  margin-top: -13.2rem;
+  margin-left: 12rem;
+}
+
+:before :after {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
