@@ -13,7 +13,7 @@ get_header(); ?>
                     <h3> Gaëlle
                         <br>FLOCH</br>
                     </h3>
-                    <p-2>Web.developpeuse.</p-2>
+                    <p-2 class=typewriter"">Web.developpeuse.</p-2>
 
                 </div>
                 <div class="photos">

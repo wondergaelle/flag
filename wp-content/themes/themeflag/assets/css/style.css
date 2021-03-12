@@ -8670,11 +8670,11 @@ nav ul, ul {
 
 a {
   text-decoration: none;
-  color: #303030;
+  color: black;
   margin: 0;
 }
 a:hover {
-  color: #303030;
+  color: black;
   text-decoration: none;
 }
 
@@ -8688,42 +8688,14 @@ dd {
   padding: 0;
 }
 
-body {
-  overflow-x: hidden;
+#header .container .ct .infos p-1, p-2 {
+  font-family: "JMH Typewriter";
+  font-size: 25px;
 }
 
-p.pole {
-  text-transform: uppercase;
-}
-
-.border-section {
-  padding: 0 100px;
-}
-@media (max-width: 768px) {
-  .border-section {
-    padding: 0 20px;
-  }
-}
-.border-section hr {
-  display: flex;
-  color: #303030;
-  border: 1px solid #303030;
-  margin: 0;
-}
-.border-section span.text-border {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.border-section-contact {
-  padding: 0;
-}
-.border-section-contact hr {
-  display: flex;
-  color: #303030;
-  border: 1px solid #303030;
-  margin: 0;
+#header .container .ct .infos h3 {
+  font-family: "Happy Time";
+  font-size: 60px;
 }
 
 #header {
@@ -8769,9 +8741,6 @@ p.pole {
   }
 }
 #header .container:after {
-  background-size: 1px;
-  background-repeat: repeat-y;
-  background-position: 0 50%, 25% 50%, 50% 50%, 75% 50%, 100% 50%;
   content: "";
   height: 100%;
   left: 50%;
@@ -8791,14 +8760,8 @@ p.pole {
   z-index: 0;
 }
 
-#header .container .ct .infos p-1, p-2 {
+.p-2 span {
   font-family: "JMH Typewriter";
-  font-size: 25px;
-}
-
-#header .container .ct .infos h3 {
-  font-family: "Happy Time";
-  font-size: 60px;
 }
 
 #header .container:after {

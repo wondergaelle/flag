@@ -14,10 +14,10 @@ nav ul, ul {
 }
 a {
   text-decoration: none;
-  color: $gray;
+  color: black;
   margin: 0;
   &:hover{
-    color: $gray;
+    color: black;
     text-decoration: none;
   }
 }
@@ -32,42 +32,14 @@ dd {
   margin: 0;
   padding: 0;
 }
-body{
-  overflow-x: hidden;
-}
-p.pole{
-  text-transform: uppercase;
-}
 
-/// BORDER ///
-.border-section{
-  padding: 0 100px;
-  @media (max-width: $bp-medium) {
-    padding: 0 20px;
-  }
 
-  hr{
-    display: flex;
-    color: #303030;
-    border: 1px solid #303030;
-    margin: 0;
-  }
-  span.text-border{
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 300;
-  }
+#header .container .ct .infos p-1, p-2 {
+  font-family: "JMH Typewriter";
+  font-size: 25px;
 }
 
-.border-section-contact {
-  padding: 0;
-  hr{
-    display: flex;
-    color: #303030;
-    border: 1px solid #303030 ;
-    margin: 0;
-  }
+#header .container .ct .infos h3 {
+  font-family: "Happy Time";
+  font-size: 60px;
 }
-
-
-

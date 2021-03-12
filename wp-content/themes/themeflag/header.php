@@ -14,13 +14,4 @@
 
 <body <?php body_class() ?>>
 
-<div class="header-content d-flex flex-column align-items-start justify-content-around h-100">
-    <a href="<?= get_site_url() ?>"><img src="<?= get_template_directory_uri() . '/assets/img/logo.png' ?>" alt="logo sauvages"></a>
-    <div class="nav d-flex flex-column">
-        <a href="<?= get_site_url() ?>/agence/" class="text-sv-blue nav-link sv-link p-0 my-2">Agence</a>
-        <a href="<?= get_site_url() ?>/skills/" class="text-sv-blue nav-link sv-link p-0 my-2">Skills</a>
-        <a href="<?= get_site_url() ?>/works/" class="text-sv-blue nav-link sv-link p-0 my-2">Works</a>
-        <a href="<?= get_site_url() ?>/contact/" class="text-sv-blue nav-link sv-link p-0 my-2">Contact</a>
-    </div>
 
-</div>
