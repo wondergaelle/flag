@@ -1,6 +1,7 @@
 <?php
 
-function addThemeFiles() {
+function addThemeFiles()
+{
     $css_directory = get_template_directory_uri() . '/assets/css/';
     wp_enqueue_style('style', $css_directory . 'style.css');
 
@@ -12,7 +13,9 @@ function addThemeFiles() {
     wp_enqueue_script('main', $js_directory . 'main.js', 'jquery');
 
 }
+
 add_action('wp_enqueue_scripts', 'addThemeFiles');
+
 /**
  * Theme configuration
  */
@@ -26,13 +29,10 @@ add_action('init', function () {
     add_theme_support('post-thumbnails');
 
     // Navigations
-
-    function register_my_menu() {
-        register_nav_menu('menu-flag',__( 'flag' ));
-    }
-    add_action( 'init', 'register_my_menu' );
-
-
+    register_nav_menus(array(
+        'main' => 'Menu Principal',
+        'footer' => 'Bas de page',
+    ));
 
     // Custom Image sizes
     add_image_size('thumb-medium', 560, 580, true);
@@ -66,7 +66,6 @@ function init_wp()
 }
 
 add_action('init', 'init_wp');
-
 
 
 /**s
@@ -113,5 +112,46 @@ add_filter('get_the_archive_title', function ($title) {
     }
     return $title;
 });
+
+/* Désactive Gutenberg / utilisation de l'éditeur classique de WP */
+
+add_filter('use_block_editor_for_post', '__return_false');
+
+
+/*
+Plugin Name: Link PDF Attachment
+Plugin URI: http://premium.wpmudev.org
+Description: Adds a link to the top of a WordPress post to the first PDF attachment
+Author: Chris Knowles
+Version: 1.0
+Author URI: http://twitter.com/ChrisKnowles
+*/
+
+function pdf_add_link($content)
+{
+
+    global $post;
+    if (!is_single()) return $content;
+
+    $args = array(
+        'numberposts' => 1,
+        'order' => 'ASC',
+        'post_mime_type' => 'application/pdf',
+        'post_parent' => $post->ID,
+        'post_status' => null,
+        'post_type' => 'attachment',
+    );
+
+    $attachments = get_children($args);
+
+    if ($attachments) {
+        foreach ($attachments as $attachment) {
+            $content = '<div class="pdf_download"><a href="' . wp_get_attachment_url($attachment->ID) . '" target="_blank" >Download article as PDF</a></div>' . $content;
+        }
+    }
+    return $content;
+}
+
+add_filter('the_content', 'pdf_add_link');
 
 
