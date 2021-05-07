@@ -4,89 +4,35 @@ Template Name: homepage
 */
 get_header(); ?>
     <div class="container">
-        <section class="header">
+    <section class="header">
 
-            <div class="ct d-flex">
-                <div class="infos d-flex justify-content-center flex-column align-items-center">
-                    <p-1 class="typewriter">- Web.developpeuse.</p-1>
-                    <h3> Gaëlle
-                        <br>FLOCH</br>
-                    </h3>
-                    <p-2 class=typewriter"">-freelance.</p-2>
-
-                </div>
-                <div class="photos">
-                    <img src="<?= get_template_directory_uri() . '/assets/images/background-header.png' ?>" alt="">
-                </div>
-            </div>
-
-
-        </section>
-        <section class="cv flex-md-row align-items-center">
+        <div class="ct d-flex">
             <div class="infos d-flex justify-content-center flex-column align-items-center">
+                <p-1 class="typewriter">- Web.developpeuse.</p-1>
+                <h3> Gaëlle
+                    <br>FLOCH</br>
+                </h3>
+                <p-2 class=typewriter"">-freelance.</p-2>
 
-
-
-                <div class="flip d-flex col-4 align-items-start">
-                    <?php  $shortcode = get_post_meta($post->ID,'flip',true);
-                    echo do_shortcode($shortcode);?>
-                </div>
-                <button  class="btn mirada-btn mirada-btn-black m-0"><?php
-                    $file = get_field('pdf');
-                    if ($file): ?>
-                        <a href="<?php echo $file['url']; ?>" target="_blank"><?php echo $file['filename']; ?></a>
-                    <?php endif; ?></button>
-                <!--     <div class="f-fle"><?php
-                /*                $image = get_field('image');
-                                if( !empty( $image ) ): */?>
-                    <img src="<?php /*echo esc_url($image['url']); */?>" alt="<?php /*echo esc_attr($image['alt']); */?>" />
-                <?php /*endif; */?>
-
-            </div>-->
-
-       <!--     <div class="f-fle"><?php
-/*                $image = get_field('image');
-                if( !empty( $image ) ): */?>
-                    <img src="<?php /*echo esc_url($image['url']); */?>" alt="<?php /*echo esc_attr($image['alt']); */?>" />
-                <?php /*endif; */?>
-
-            </div>-->
-
-    <?php
-    $file = get_field('pdf');
-    if( $file ):
-
-        // Extract variables.
-        $url = $file['url'];
-        $title = $file['title'];
-        $caption = $file['caption'];
-        $icon = $file['icon'];
-
-        // Display image thumbnail when possible.
-        if( $file['type'] == 'image' ) {
-            $icon =  $file['sizes']['thumbnail'];
-        }
-
-        // Begin caption wrap.
-        if( $caption ): ?>
-            <div class="wp-caption">
-        <?php endif; ?>
-
-        <a href="<?php echo esc_attr($url) ; ?>" target="_blank" title="<?php echo esc_attr($title); ?>">
-            <img src="<?php echo esc_attr($icon); ?>" />
-            <span><?php echo esc_html($title); ?></span>
-        </a>
-
-        <?php
-        // End caption wrap.
-        if( $caption ): ?>
-            <p class="wp-caption-text"><?php echo esc_html($caption); ?></p>
             </div>
-        <?php endif; ?>
-    <?php endif; ?>
+            <div class="photos">
+                <img src="<?= get_template_directory_uri() . '/assets/images/background-header.png' ?>" alt="">
+            </div>
+        </div>
 
+    </section>
+    <section class="cv container d-flex flex-column flex-md-row align-items-center sm-w-50">
 
-</section>
+            <div class="flip col-12 col-md-6 d-flex p-0">
+                <?php $shortcode = get_post_meta($post->ID, 'flip', true);
+                echo do_shortcode($shortcode); ?>
+
+            </div>
+
+        <div class="text-info col-12 col-md-5 offset-1 justify-content-start">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam doloribus error exercitationem illo incidunt itaque laborum maxime mollitia perferendis quidem quisquam ratione, tempora totam? Alias beatae, deserunt iure laboriosam neque quod repellat sunt ullam voluptate? Ab alias autem ducimus esse, eum impedit minus natus non odio qui, quibusdam quis voluptatum. Beatae debitis, eveniet magnam minus quos voluptatem! Ad architecto assumenda beatae debitis delectus dicta dolorem fugit ipsa molestias, mollitia nesciunt, nisi perspiciatis quaerat quas saepe ut voluptate! Deserunt quos tempora temporibus. Alias atque aut beatae dolore doloremque facere fugiat, incidunt iusto magnam minus nam qui, quia quo quod soluta voluptates voluptatum. Animi blanditiis error fugit hic illum impedit minus tenetur veniam vitae? Eaque neque nulla perferendis quasi voluptatem? Aliquid animi aut beatae culpa cum dicta eaque eveniet harum hic illo ipsa itaque libero maiores nam officia praesentium, provident quas quibusdam, quis sapiente soluta, velit vero! Adipisci atque libero nam repellat!</p>
+        </div>
+    </section>
 
 
 
