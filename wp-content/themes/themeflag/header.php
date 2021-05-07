@@ -15,17 +15,6 @@
 
 <body <?php body_class('site'); ?>>
 
-<header class="site__header">
-
-    <ul class="menu">
-        <li><img src="<?php echo get_template_directory_uri();  ?>/img/logo.svg" alt="Logo"></li>
-        <li><a href="<?php echo home_url( '/' );  ?>"></a></li>
-        <li><a href="<?php echo home_url( '/' );  ?>"></a></li>
-        <li class="page_item page-item-10"><a href="http://wp.local/blog/">Blog</a></li>
-        <li class="page_item page-item-12"><a href="http://wp.local/contact/">Contact</a></li>
-
-    </ul>
-</header>
 
 <header class="site__header d-flex flex-row align-items-center justify-content-between w-100 py-3 mb-5  bg-white sticky-top">
     <nav class="navbar  container d-flex flex-column flex-md-row navbar-expand-md navbar sticky-top main-navbar w-100">
