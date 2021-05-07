@@ -1,0 +1,55 @@
+/// CTA ///
+
+.mirada-btn {
+  border-radius: 26px;
+  height: 52px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  text-align: center;
+  @media (max-width: $bp-medium) {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  @media (max-width: $bp-small) {
+    font-size: 15px;
+    margin-top: 15px;
+    padding: 16px;
+  }
+  @media (max-width: $bp-min-small) {
+    font-size: 12px;
+  }
+  &:active, &:focus{
+    box-shadow: none;
+  }
+  &.mirada-btn-white {
+    background-color: white;
+    color: $gray;
+    border:1.999px solid white;
+    &:hover  {
+
+      background-color: $gray;
+      color:white;
+
+      border:1px solid white;
+
+    }
+  }
+  &.mirada-btn-black {
+    background-color: $gray;
+    color: white;
+    border:1.999px solid $gray;
+    &:hover  {
+
+      background-color:white;
+      color: $gray;
+      border:2px solid $gray;
+    }
+  }
+}
+
+
+
+
+

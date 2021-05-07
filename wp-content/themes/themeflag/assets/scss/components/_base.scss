@@ -1,16 +1,17 @@
 .container {
   max-width: 1600px;
-
 }
 * {
   box-sizing: border-box;
   font-family: itc-avant-garde-gothic-pro, sans-serif;
+
 }
 
 nav ul, ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: $gray;
 }
 a {
   text-decoration: none;
@@ -34,12 +35,22 @@ dd {
 }
 
 
-#header .container .ct .infos p-1, p-2 {
+.header .infos p-1, p-2 {
   font-family: "JMH Typewriter";
   font-size: 25px;
+  color: $gray;
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
 }
 
-#header .container .ct .infos h3 {
+.header  .infos h3 {
   font-family: "Happy Time";
   font-size: 60px;
+  color: $gray;
+
+  @include media-breakpoint-down(sm) {
+ font-size: 20px;
+  }
 }
+
